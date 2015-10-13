@@ -10,11 +10,13 @@ $ab =  preg_replace("/[^a-zA-Z0-9]/","",$_GET['ab']);
 
 //Если нет адблока
 if ($ab == '0') {
+	//Прибавляем к счетчику adblock_no +1
 	mysql_query("UPDATE adblock SET adblock_no = adblock_no + 1") or die(' Не удалось записать в лог Адблока 0: ' . mysql_error());
 }
 
 //Если есть адблок
 elseif ($ab == '1') {
+	//Прибавляем к счетчику adblock_yes +1
 	mysql_query("UPDATE adblock SET adblock_yes = adblock_yes + 1") or die(' Не удалось записать в лог Адблока 1: ' . mysql_error());
 }
 
