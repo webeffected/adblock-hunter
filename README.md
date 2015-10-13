@@ -10,6 +10,9 @@
 По умолчанию для просмотра статистики необходимо открыть write.php?ab=FkLert4hnx<BR>
 Для удаления данных - write.php?ab=rwEVh45dfH<BR>
 
+Пример отображения статистики:<BR>
+![Статистика](http://pp.screenshotlink.ru/v2572/2c8/tathwHu8inQ.png "Статистика")<BR>
+
 Все желающие внести свой вклад в улучшение - милости просим.<BR>
 
 За основу взят скрипт команды TJ - https://github.com/tjournal/adblock-detection - за что им огромное спасибо.
