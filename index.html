@@ -1,0 +1,32 @@
+<html>
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <title>AdBlock Hunter</title>
+</head>
+<body>
+	<div id="result"></div>
+    <script src="advert.js"></script>
+    <script>
+		//Проверяем наличие переменной. Если есть - адблок её не заблокировал, значит его нет или он выключен.
+        if (!('ab' in window)) { window.ab = true; }
+		//Если есть адблок
+        if (window.ab == true) {
+			$.ajax({
+				url: "write.php?ab=1",
+				success: function(data){
+					$("#result").html(data);
+				}
+			});			
+        } 
+		//Нет адблока
+		else {
+			$.ajax({
+				url: "write.php?ab=0",
+				success: function(data){
+					$("#result").html(data);
+				}
+			});			
+        }
+    </script>
+</body>
+</html>
