@@ -1,5 +1,5 @@
 /*Основные*/
-body {background-color:#000000; font: 13px arial,verdana,tahoma,sans-serif;}
+body {background-color:#FFFFFF; font: 13px arial,verdana,tahoma,sans-serif;}
 
 /*Цвет ссылок*/
 a {
@@ -55,6 +55,7 @@ a:hover {
 	background: linear-gradient(to bottom, #f6f6f6 0%,#f3f3f3 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6f6f6', endColorstr='#f3f3f3',GradientType=0 ); /* IE6-9 */
 	padding: 8px;
+	text-align: center;
 }
 
 .stat-table tr {border-radius: 5px;}
