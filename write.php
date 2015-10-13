@@ -33,18 +33,30 @@ elseif ($ab == $stat) {
 	$ab_percent = $ab_row['adblock_yes']/$ab_total*100;
 	//Выводим информацию в таблицу
 	?>
-	<table>
-		<tr>
-			<th>С адблоком</th>
-			<th>Без адблока</th>
-			<th>Процент с адблоком</th>
-		</tr>
-		<tr>
-			<td><?php echo $ab_row['adblock_yes'] ?></td>
-			<td><?php echo $ab_row['adblock_no'] ?></td>
-			<td><?php echo number_format($ab_percent, 2, '.', ' ') ?>%</td>
-		</tr>
-	</table>
+	<html>
+		<head>
+			<title>Adblock Hunter - статистика</title>
+			<link href="style.css" media="all" rel="stylesheet" />			
+		</head>
+		<body>
+			<div class="wrap">
+				<table class="stat-table">
+					<tr>
+						<th>С адблоком</th>
+						<th>Без адблока</th>
+						<th>Всего</th>
+						<th>Процент с адблоком</th>
+					</tr>
+					<tr>
+						<td><?php echo number_format($ab_row['adblock_yes'], 0, '.', ' ') ?></td>
+						<td><?php echo number_format($ab_row['adblock_no'], 0, '.', ' ') ?></td>
+						<td><?php echo number_format($ab_total, 0, '.', ' ') ?></td>
+						<td><?php echo number_format($ab_percent, 2, '.', ' ') ?>%</td>
+					</tr>
+				</table>
+			</div>
+		</body>
+	</html>
 <?
 }
 
